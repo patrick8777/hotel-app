@@ -16,6 +16,7 @@ export class EmployeeService {
       .pipe(catchError(this.errorHandler));
   }
   errorHandler(error: HttpErrorResponse) {
+    alert('wrong URL');
     return throwError(error.message || 'Server Error');
   }
 }
